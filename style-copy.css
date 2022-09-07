@@ -1,0 +1,288 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+  
+  :root {
+  font-size: 62.5%;
+  --main-bg-color:#EFF1FF;
+  --main-text-color:#23053A;
+  --main-text-font:'Palanquin';
+  --main-text-size:2.0rem;
+  }
+  
+  body{
+  background-color:var(--main-bg-color);;
+  }
+
+  .logo{
+  margin-top: 1rem;
+  }
+  .header {
+  background-color:#8E9AAF;
+  height: 27.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:3rem;
+  }
+  
+  .header .logo{
+  height: 13.7rem;
+  margin-top: 3.2rem;
+  animation: spin 1s;
+  }
+  
+  h1 {
+    font-family: 'Staatliches';
+    font-weight: 400;
+    font-size: 4rem;
+    color: white;
+    background-color: #CBC0D3;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .cards{
+padding: 0 1rem;
+    }
+  
+ .card{
+  position: relative;
+  margin: 36px 0;
+  }
+  
+  .card img:hover{
+  transform: scale(1.03);
+  opacity: .7;
+  }
+
+  .card img{
+  width: 100%;
+  object-fit: cover;
+  transition: all 200ms;
+  animation: up 800ms;
+  border-radius: 25px;
+  }
+  
+  .page p{
+  font-family:var(--main-text-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--main-text-size);
+  color: var(--main-text-color);
+  padding: 14px 4rem 27px;
+  text-align: center;
+  }
+  
+ h2{
+    font-family: 'Staatliches';
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+    color: #4A4E69;
+    background-color: #FEEAFA;
+    width: fit-content;
+    padding: .75rem 2.3rem;
+    border-radius: 1.75rem;
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+    animation: down 800ms 600ms backwards;
+  }
+  
+.contato{
+display: none;
+}
+.contato a{
+  color: black;
+  font-weight: 800;
+  text-decoration:none;
+  }
+  a:hover{
+  color:#23053A;
+  text-decoration:underline;
+  }
+
+  .invisible{
+    display: none;
+  }
+
+  @keyframes up{
+    0%{
+    opacity: 0;
+    transform:translateY(20px);}
+  
+    100%{
+    opacity: 1;
+    transform: translateY(0);
+    }
+    }
+  
+@keyframes down{
+0%{
+  opacity: 0;
+  transform:translateY(-20px);}
+    
+100%{
+  opacity: 1;
+  transform: translateY(0);}
+      }
+  
+@keyframes spin{
+0%{
+  transform: rotate(0deg);}
+          
+100%{
+  transform: rotate(360deg);}
+} 
+        
+.cards div:nth-child(1)
+ {grid-area: A;}
+.cards div:nth-child(2)
+{grid-area: B;}
+.cards div:nth-child(3)
+{grid-area: C;}
+.cardsn div:nth-child(4)
+{grid-area: D;}
+  
+
+@media (min-width:1023px){
+:root {
+--main-bg-color:#FFFFFF;
+--main-text-color:#FFFFFF;
+--main-text-font:'Roboto', sans-serif;
+--main-text-size:2.4rem;
+}
+
+  .cards div:nth-child(1)
+  {grid-area: A;}
+ .cards div:nth-child(2)
+ {grid-area: B;}
+ .cards div:nth-child(3)
+ {grid-area: C;}
+ .cards div:nth-child(4)
+ {grid-area: D;}
+ .cards div:nth-child(5)
+ {grid-area: E;}
+ .cards div:nth-child(6)
+ {grid-area: F;}
+
+.desktop{
+display: flex;
+flex-direction: column;
+background-color:#8E9AAF ;
+max-width: 37.7rem;
+min-height: 100vh;
+}
+
+.page{
+  display: flex;
+  flex-direction: row; 
+  gap:10rem;
+}
+
+.cards{
+  min-width: 50rem;
+  margin: 6.4rem 0 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    'A B E'
+    'D B F'
+    'D C F';
+    align-content: center;
+    gap: 32px 32px;
+}
+
+.card{
+margin: 0;
+}
+
+.card .sm{
+width: 220px;
+height: 147px;
+object-fit: cover;
+border-radius: 25px;
+}
+.card .lg{
+width: 220px;
+height: 350px;
+object-fit: cover;
+border-radius: 25px;
+}
+
+.main {
+display: flex;
+flex-direction: column;
+gap: 5rem;
+}
+
+.page .contato{
+display: inline;
+font-family: 'Open Sans';
+font-weight: 400;
+font-size: 1.4rem;
+color: #4A4E69;
+padding: 0;
+}
+
+.invisible{
+  display: grid;
+}
+
+}
+
+@media (min-width:2550px){
+  :root {
+  --main-bg-color:#FFFFFF;
+  --main-text-color:#FFFFFF;
+  --main-text-font:'Roboto', sans-serif;
+  --main-text-size:4rem;
+  }
+  .header {
+  height: 50rem;
+  }
+  .header img{
+    height: 30rem;
+    margin-top: 5rem;
+    animation: spin 1s;
+    }
+  .desktop{
+  max-width: 57.7rem;
+  gap: 10rem;
+  }
+  .header {
+  gap: 10rem;
+  }
+  h1 {
+  font-size: 8rem;
+  }
+  .page{
+    gap:20rem;
+  }
+
+  .main {
+    gap: 10rem;
+    }
+
+  .cards{
+      gap: 60px 60px;
+  }
+  
+  .card .sm{
+  width: 44rem;
+  height: 30rem;
+  }
+  .card .lg{
+  width: 44rem;
+  height: 70rem;
+  }
+  
+  .page .contato{
+  font-size: 3rem;
+  }
+  
+  }
